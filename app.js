@@ -33,8 +33,15 @@ var createButtons = () => {
     </button>
     `).join('');
 
-    document.getElementById('keyboard').innerHTML = buttonsHTML
+    document.getElementById('keyboard').innerHTML = buttonsHTML;
 }
+
+// 6. Create handleGuess function with parameter of chosenletter
+var handleGuess = (chosenletter) => {
+  guessed.indexOf(chosenletter) ===
+}
+
+
 // 5. Create a function for the guessedWord. Using ? as a ternary operator in place of "If...Else" is as follows: 
 //  Condition (to be tested) ? True(value if true) : False (value if false). Define wordStatus as null. Split string into substrings and return them as array. Use .map and then check if letter exists in the guessed array. If it exists, it will be greater than 0, else it will be -1. Letter will be displayed as underscores and use .join to remove commas. 
 // Assign wordStatus to #wordSpotlight id. 
