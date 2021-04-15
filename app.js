@@ -4,7 +4,7 @@ var words = [
   "Finals Trophy",
   "Slam Dunk"
 ]
-// 2. Start defining things that will be used in the game, i.e., define answer, maxWrong, wrongGUesses, etc. 
+// 2. Start defining things that will be used in the game, i.e., define answer, maxWrong, wrongGuesses, etc. 
 let answer = '';
 let maxWrong = 5;
 let wrongGuesses  = 0;
