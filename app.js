@@ -17,4 +17,25 @@ var randomWord = () => {
   alert(answer);
 }
 
+//4. Create a function that will generate the buttons keyboard. Create a variable buttonsHTML and assign it to string of alphabet, use  .split to split into individual strings and return as array. The map() method creates a new array populated with the results of calling a provided function on every element in the calling array. Template literals are string literals allowing embedded expressions. You can use multi-line strings and string interpolation features with them. Assign buttonHTML to 'keyboard' id  using document.getElementById
+// use .join to join all the elements of an array into a string, set it to empty quotes to remove separator. 
+
+var createButtons = () => {
+  let buttonsHTML = "abcdefghijklmnopqrstuvwxyz".split('').map(letter =>
+    `
+    <button
+    class = "btn btn-lg btn-primary m-2"
+    id = '` + letter + `
+    onCLick = "handleGuess('` + letter + `')"
+    >
+    `+ letter + `
+    </button>
+    `).join('');
+
+    document.getElementById('keyboard').innerHTML = buttonsHTML
+}
+
+document.getElementById('maxWrong').innerHTML = maxWrong;
+
 randomWord();
+createButtons();
