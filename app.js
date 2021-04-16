@@ -2,7 +2,16 @@
 var words = [
   "jordan",
   "rings",
-  "crossover"
+  "crossover",
+  "basketball",
+  "jumpshot",
+  "layup",
+  "fadeaway",
+  "postup",
+  "dunk",
+  "pickandroll",
+  "boxout",
+  "sixrings"
 ]
 // 2. Start defining things that will be used in the game, i.e., define answer, maxWrong, wrongGuesses, etc. 
 let answer = '';
@@ -64,6 +73,7 @@ var updateJordan = () =>{
 var checkIfWon = () => {
   if (wordStatus === answer){
     document.getElementById('keyboard').innerHTML = 'You have won the NBA FINALS!'
+    document.getElementById('jordan').src = './images/trophy.jpg'
   }
 }
 
@@ -71,6 +81,7 @@ var checkIfLost = () => {
   if (wrongGuesses === maxWrong){
     document.getElementById('wordHighlight').innerHTML = 'The answer was: ' + answer;
     document.getElementById('keyboard').innerHTML = 'You choked! Better luck next time!'
+    document.getElementById('rim').src = './images/loss.jpg'
   }
 }
 
@@ -97,6 +108,7 @@ var reset = () => {
   wrongGuesses = 0;
   guessed = [];
   document.getElementById('jordan').src = './images/0.jpg'
+  document.getElementById('rim').src = './images/net.jpg'
 
   randomWord();
   guessedWord();
