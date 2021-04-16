@@ -50,17 +50,26 @@ var handleGuess = (keyboard) => {
     wrongGuesses++
     updateWrongGuesses();
     checkIfLost ();
+    updateJordan();
   }
 }
 
-// 8. Create functions to run if game has been won or lost.  
+// 10. Create a function that will change photo of Jordan with each mistake. Use document.getElementById to select image Id and then concatenate folder with wrongGuesses variable and .jpg. 
+
+var updateJordan = () =>{
+  document.getElementById('jordan').src = './images/' + wrongGuesses + '.jpg'
+}
+
+// 8. Create functions to run if game has been won or lost. use doucment.getElementById to select wordHighlight, use .innerHTML to change text to dsiplay the answer.   
 var checkIfWon = () => {
   if (wordStatus === answer){
     document.getElementById('keyboard').innerHTML = 'You have won the NBA FINALS!'
   }
 }
+
 var checkIfLost = () => {
   if (wrongGuesses === maxWrong){
+    document.getElementById('wordHighlight').innerHTML = 'The answer was: ' + answer;
     document.getElementById('keyboard').innerHTML = 'You choked! Better luck next time!'
   }
 }
@@ -74,7 +83,7 @@ var checkIfLost = () => {
 var guessedWord = () => {
   wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >=0 ? letter : " _ ")).join('');
 
-  document.getElementById('wordSpotlight').innerHTML = wordStatus;
+  document.getElementById('wordHighlight').innerHTML = wordStatus;
 }
 
 // 7. Create function UpdateWrongGuesses, use document.getElementById to assign wrongGuesses variable to #wrongGuesses, inner.HTML to show the counter increase.  
@@ -83,11 +92,11 @@ var updateWrongGuesses = () => {
   document.getElementById('wrongGuesses').innerHTML = wrongGuesses;
 }
 
-// Create function for reset button
+// 9.  Create function for reset button
 var reset = () => {
   wrongGuesses = 0;
   guessed = [];
-  document.getElementById('jordan').src = './images/1.jpg'
+  document.getElementById('jordan').src = './images/0.jpg'
 
   randomWord();
   guessedWord();
