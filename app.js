@@ -83,7 +83,17 @@ var updateWrongGuesses = () => {
   document.getElementById('wrongGuesses').innerHTML = wrongGuesses;
 }
 
+// Create function for reset button
+var reset = () => {
+  wrongGuesses = 0;
+  guessed = [];
+  document.getElementById('jordan').src = './images/1.jpg'
 
+  randomWord();
+  guessedWord();
+  updateWrongGuesses();
+  createButtons();
+}
 
 document.getElementById('maxWrong').innerHTML = maxWrong;
 
