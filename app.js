@@ -26,7 +26,7 @@ var createButtons = () => {
     `
     <button
     class = "btn btn-lg btn-primary m-2"
-    id = '` + letter + `
+    id = '` + letter + `'
     onCLick = "handleGuess('` + letter + `')"
     >
     `+ letter + `
@@ -36,10 +36,22 @@ var createButtons = () => {
     document.getElementById('keyboard').innerHTML = buttonsHTML;
 }
 
-// 6. Create handleGuess function with parameter of chosenletter
-// var handleGuess = (chosenletter) => {
-//   guessed.indexOf(chosenletter) ===
-// }
+// 6. Create handleGuess function with parameter of keyboard (id). Use indexOf to return the index of the first occurrence in the array. If it is strictly equal to -1, push keyboard into guessed array, else return null. Use document.getElementById and set attribute of disabled if true to keyboard. 
+// if answer.indexOf keyboard is greater than zero , run the function guessedWord(). Else, if it is strictly, -1, increment wrongGuesses by 1 and run updateWrongGuesses function. 
+
+var handleGuess = (keyboard) => {
+  guessed.indexOf(keyboard) === -1 ? guessed.push(keyboard) : null;
+  document.getElementById(keyboard).setAttribute('disabled', true);
+
+  alert(answer);
+
+  if (answer.indexOf(keyboard) >= 0) {
+    guessedWord()
+  } else if (answer.indexOf(keyboard) === -1){
+    wrongGuesses++
+    updateWrongGuesses();
+  }
+}
 
 
 // 5. Create a function for the guessedWord. Using ? as a ternary operator in place of "If...Else" is as follows: 
@@ -48,11 +60,17 @@ var createButtons = () => {
 // Call the function
 // Comes up with a different word to be guessed with each refresh. 
 
-  var guessedWord = () => {
-    wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >=0 ? letter : " _ ")).join('');
+var guessedWord = () => {
+  wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >=0 ? letter : " _ ")).join('');
 
-    document.getElementById('wordSpotlight').innerHTML = wordStatus;
-  }
+  document.getElementById('wordSpotlight').innerHTML = wordStatus;
+}
+
+// 7. Create function UpdateWrongGuesses, use document.getElementById to assign wrongGuesses variable to #wrongGuesses, inner.HTML to show the counter increase.  
+
+var updateWrongGuesses = () => {
+  document.getElementById('wrongGuesses').innerHTML = wrongGuesses;
+}
 
 document.getElementById('maxWrong').innerHTML = maxWrong;
 
