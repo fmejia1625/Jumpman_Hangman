@@ -1,7 +1,7 @@
 // 1. Create a variable words with 3 strings to test
 var words = [
-  "Jordan",
-  "Rings",
+  "jordan",
+  "rings",
   "crossover"
 ]
 // 2. Start defining things that will be used in the game, i.e., define answer, maxWrong, wrongGuesses, etc. 
@@ -43,16 +43,27 @@ var handleGuess = (keyboard) => {
   guessed.indexOf(keyboard) === -1 ? guessed.push(keyboard) : null;
   document.getElementById(keyboard).setAttribute('disabled', true);
 
-  alert(answer);
-
   if (answer.indexOf(keyboard) >= 0) {
-    guessedWord()
+    guessedWord();
+    checkIfWon();
   } else if (answer.indexOf(keyboard) === -1){
     wrongGuesses++
     updateWrongGuesses();
+    checkIfLost ();
   }
 }
 
+// 8. Create functions to run if game has been won or lost.  
+var checkIfWon = () => {
+  if (wordStatus === answer){
+    document.getElementById('keyboard').innerHTML = 'You have won the NBA FINALS!'
+  }
+}
+var checkIfLost = () => {
+  if (wrongGuesses === maxWrong){
+    document.getElementById('keyboard').innerHTML = 'You choked! Better luck next time!'
+  }
+}
 
 // 5. Create a function for the guessedWord. Using ? as a ternary operator in place of "If...Else" is as follows: 
 //  Condition (to be tested) ? True(value if true) : False (value if false). Define wordStatus as null. Split string into substrings and return them as array. Use .map and then check if letter exists in the guessed array. If it exists, it will be greater than 0, else it will be -1. Letter will be displayed as underscores and use .join to remove commas. 
@@ -71,6 +82,8 @@ var guessedWord = () => {
 var updateWrongGuesses = () => {
   document.getElementById('wrongGuesses').innerHTML = wrongGuesses;
 }
+
+
 
 document.getElementById('maxWrong').innerHTML = maxWrong;
 
