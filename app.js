@@ -37,9 +37,9 @@ var createButtons = () => {
 }
 
 // 6. Create handleGuess function with parameter of chosenletter
-var handleGuess = (chosenletter) => {
-  guessed.indexOf(chosenletter) ===
-}
+// var handleGuess = (chosenletter) => {
+//   guessed.indexOf(chosenletter) ===
+// }
 
 
 // 5. Create a function for the guessedWord. Using ? as a ternary operator in place of "If...Else" is as follows: 
