@@ -4,12 +4,56 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'academic_m54regular';
+  src: url('fonts/academic_m54-webfont.woff2') format('woff2'),
+       url('fonts/academic_m54-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  text-align: center;
+  font-size: 25px;
+  background-color: #ba161a;
+  color: white;
+}
+
+h1{
+  font-family: 'academic_m54regular';
+}
+
+.chances {
+  font-family: 'academic_m54regular';
+}
+
+p {
+  font-family: 'academic_m54regular';
+}
+
 #jordan {
   height: 25%;
   width: 25%;
+  border-radius: 50%;
 }
 
 #rim {
   height: 30%;
   width: 30%;
+  border-radius: 50%;
+}
+
+button {
+  background-color: #ba161a; 
+  /* border: none; */
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: 'academic_m54regular';
 }

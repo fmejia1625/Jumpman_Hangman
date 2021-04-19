@@ -8,10 +8,13 @@ var words = [
   "layup",
   "fadeaway",
   "postup",
-  "dunk",
-  "pickandroll",
+  "slamdunk",
   "boxout",
-  "sixrings"
+  "sixrings",
+  "championships",
+  "shrug",
+  "trophies",
+  "spacejam"
 ]
 // 2. Start defining things that will be used in the game, i.e., define answer, maxWrong, wrongGuesses, etc. 
 let answer = '';
@@ -45,7 +48,7 @@ var createButtons = () => {
     document.getElementById('keyboard').innerHTML = buttonsHTML;
 }
 
-// 6. Create handleGuess function with parameter of keyboard (id). Use indexOf to return the index of the first occurrence in the array. If it is strictly equal to -1, push keyboard into guessed array, else return null. Use document.getElementById and set attribute of disabled if true to keyboard. 
+// 6. Create handleGuess function with parameter of keyboard. Use indexOf to return the index of the first occurrence in the array. If it is strictly equal to -1, push keyboard into guessed array, else return null. Use document.getElementById and set attribute of disabled if true to keyboard. 
 // if answer.indexOf keyboard is greater than zero , run the function guessedWord(). Else, if it is strictly, -1, increment wrongGuesses by 1 and run updateWrongGuesses function. 
 
 var handleGuess = (keyboard) => {
@@ -72,6 +75,7 @@ var updateJordan = () =>{
 // 8. Create functions to run if game has been won or lost. use doucment.getElementById to select wordHighlight, use .innerHTML to change text to dsiplay the answer.   
 var checkIfWon = () => {
   if (wordStatus === answer){
+    document.getElementById('rim').src = './images/win.jpg'
     document.getElementById('keyboard').innerHTML = 'You have won the NBA FINALS!'
     document.getElementById('jordan').src = './images/trophy.jpg'
   }
