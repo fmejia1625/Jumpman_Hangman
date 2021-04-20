@@ -15,7 +15,8 @@ var words = [
   "shrug",
   "trophies",
   "spacejam",
-  "twentythree"
+  "twentythree",
+  "buckets"
 ]
 // 2. Start defining things that will be used in the game, i.e., define answer, maxWrong, wrongGuesses, etc. 
 let answer = '';
@@ -55,6 +56,7 @@ var createButtons = () => {
 var handleGuess = (keyboard) => {
   guessed.indexOf(keyboard) === -1 ? guessed.push(keyboard) : null;
   document.getElementById(keyboard).setAttribute('disabled', true);
+  document.getElementById(keyboard).style.color = '#ba161a'
 
   if (answer.indexOf(keyboard) >= 0) {
     guessedWord();
