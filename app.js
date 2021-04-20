@@ -14,7 +14,8 @@ var words = [
   "championships",
   "shrug",
   "trophies",
-  "spacejam"
+  "spacejam",
+  "twentythree"
 ]
 // 2. Start defining things that will be used in the game, i.e., define answer, maxWrong, wrongGuesses, etc. 
 let answer = '';

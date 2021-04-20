@@ -37,16 +37,22 @@ body {
 
 h1{
   font-family: 'academic_m54regular';
-  color: #ba161a;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: black;
+  padding-top: 5px;
+  background-color: #ba161a;
+  border-radius: 5px;
 }
 
 .chances {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   font-family: 'academic_m54regular';
   color: black;
 }
 
 p {
   font-family: 'academic_m54regular';
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 #jordan {
