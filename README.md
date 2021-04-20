@@ -1,6 +1,6 @@
 # Welcome to Jumpman-Hangman. 
 
-## To view onlne, Click the link
+## To view online, Click the link
 [Jumpman](https://fmejia1625.github.io/Jumpman_Hangman/)
 
 Thank you for taking the time to check out my project. It is a Michael Jordan-themed version of the popular game, Hangman. The technologies that I used for tis are as follows: 
