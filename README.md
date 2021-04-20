@@ -18,5 +18,6 @@ In my app.js file, I listed my steps that I used to create each function that wo
 I used CSS to added a video background, font styling and colors to match those of the Chicago Bulls and added music which can be toggled on and off. 
 
 I had difficulty allocating for spaces between words, therefore each word that is used in the game contains no spaces. There are also no numbers used, and each word is based on the game of basketball or Jordan's accomplishments. 
+Other difficulties I had included uploading my website to GitHub Pages due to the file size being larger than 25MB. This is most likely from the video that I used for the background of my game. If there is any way that I am able to host it through a different route, I would love to know. 
 
 Feel free to make any comments or addresss your concerns on my github. 
