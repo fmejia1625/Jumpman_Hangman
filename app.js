@@ -84,8 +84,8 @@ var checkIfWon = () => {
 var checkIfLost = () => {
   if (wrongGuesses === maxWrong){
     document.getElementById('wordHighlight').innerHTML = 'The answer was: ' + answer;
-    document.getElementById('keyboard').innerHTML = 'You choked! Better luck next time!'
-    document.getElementById('rim').src = './images/loss.jpg'
+    document.getElementById('keyboard').innerHTML = 'You choked! Better luck next time!';
+    document.getElementById('rim').src = './images/loss.jpg';
   }
 }
 

@@ -9,9 +9,7 @@
 </head>
 <body>
   <div class="container">
-    <br>
-    <h1 class="text-center">23 Jumpman</h1>
-    <br>
+    <h1 class="titleGame">23 Jumpman</h1> 
     <div class="chances">Wrong Guesses: <span id='wrongGuesses'>0</span> of <span id="maxWrong"></span></div>
     <br>
     <div class="text-center">
@@ -24,11 +22,14 @@
       <div id="wordHighlight">word to be guessed goes here</div>
       <br>
       <div id="keyboard"></div>
-      <br>
       <button class="btn btn-info" onClick="reset()">Reset</button>
     </div>
+    <audio src="/Audio/Jumpman.mp3" controls></audio>
   </div>
-
+  <div class="video-container">
+    <video src="mixtape.mp4" muted loop autoplay></video>
+  </div>
+  <br>
   <script src="app.js"></script>
 </body>
 </html>
