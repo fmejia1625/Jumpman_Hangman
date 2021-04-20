@@ -37,11 +37,12 @@ body {
 
 h1{
   font-family: 'academic_m54regular';
-  color: white;
+  color: #ba161a;
 }
 
 .chances {
   font-family: 'academic_m54regular';
+  color: black;
 }
 
 p {
