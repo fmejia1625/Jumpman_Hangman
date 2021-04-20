@@ -101,6 +101,7 @@ var guessedWord = () => {
   document.getElementById('wordHighlight').innerHTML = wordStatus;
   document.getElementById('wordHighlight').style.fontSize = "xx-large";
   document.getElementById('wordHighlight').style.fontFamily = 'cursive';
+  document.getElementById('wordHighlight').style.color = 'black';
 }
 
 // 7. Create function UpdateWrongGuesses, use document.getElementById to assign wrongGuesses variable to #wrongGuesses, inner.HTML to show the counter increase.  
